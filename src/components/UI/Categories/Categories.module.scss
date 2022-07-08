@@ -1,0 +1,43 @@
+@use '../../../styles/variables' as *;
+
+.categories {
+    overflow: auto;
+
+    @media (max-width: 1226px) {
+        margin: 0px 0px 20px 0px;
+    }
+
+    ul {
+        display: flex;
+    
+        li {
+            background-color: lighten($customGrey, 39%);
+            padding: 13px 30px;
+            border-radius: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out;
+            font-family: Proxima Nova;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.015em;
+    
+            &:hover {
+                background-color: lighten($customGrey, 35%);
+            }
+        
+            &:active {
+                background-color: lighten($customGrey, 25%);
+                color: #FFFFFF;
+            }
+        
+            &.active {
+                background-color: $customBlack;
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+}

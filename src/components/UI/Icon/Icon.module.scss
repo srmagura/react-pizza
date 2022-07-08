@@ -1,0 +1,53 @@
+@use '../../../styles/variables' as *;
+
+.button {
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 2px solid $customOrange;
+    color: $customOrange;
+    border-radius: 50%;
+    transition: background-color .2s linear;
+
+    svg {
+        width: 10px;
+        height: 10px;
+        fill: $customOrange;
+        transition: fill .2s linear;
+    }
+
+    &:disabled {
+        border-color: $customGrey;
+        svg {
+            fill:$customGrey;
+        }
+    }
+
+    &:hover:enabled {
+        background-color: $customOrange;
+        svg {
+            fill:#FFFFFF;
+        }
+    }
+
+    &:active:enabled {
+        transform: translateY(2px);
+    }
+}
+
+.close {
+    composes: button;
+    border-color: $customGrey;
+
+    svg {
+        fill: $customGrey;
+    }
+
+    &:hover:enabled {
+        border: $customBlack;
+        background-color: $customBlack;
+        svg {
+            fill:#FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use '../../../styles/variables' as *;
+
+.pagination {
+
+    .page {
+        display: inline-block;
+        margin: 0px 10px 0px 0px;
+        user-select: none;
+
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+
+        &__link {
+            text-align: center;
+            width: 35px;
+            line-height: 32px;
+            height: 35px;
+            border: 1px solid $customOrange;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-block;
+            color: $customOrange;
+            transition: background-color .2s linear, color .2s linear;
+        }
+
+        .active {
+            background-color: $customOrange;
+            color: #fff;
+        }
+
+        .disabled {
+            border-color: $customGrey;
+            color: $customGrey;
+        }
+    }
+}

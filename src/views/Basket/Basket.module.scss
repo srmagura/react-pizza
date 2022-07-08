@@ -1,0 +1,139 @@
+@use '../../styles/variables' as *;
+
+.basket__container {
+    margin: 95px 0px 0px 0px;
+    padding: 0px 295px 130px;
+
+    @media (max-width: 1050px) {
+        padding: 0px 147px 130px;
+    }
+
+    @media (max-width: 780px) {
+        padding: 0px 40px 130px;
+    }
+
+    &__content {
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0px 30px 0px;
+            margin: 0px 0px 30px 0px;
+            border-bottom: 1px solid lighten($customGrey, 30%);
+
+            @media (max-width: 780px) {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &__left {
+                display: flex;
+                align-items: center;
+
+                @media (max-width: 780px) {
+                    margin: 0px 0px 10px 0px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0px 17px 0px 0px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 32px;
+                    letter-spacing: 0.01em;
+                    color: $customBlack;
+                }
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    svg,
+                    span {
+                        fill: darken($customGrey, 35%);
+                        color: darken($customGrey, 35%);
+                    }
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0px 7px 0px 0px;
+                    fill: $customGrey;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $customGrey
+                }
+            }
+        }
+
+        .basket__footer {
+            display: flex;
+            flex-direction: column;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 0px 40px 0px;
+
+                @media (max-width: 780px) {
+                    //justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &__left,
+                &__right {
+                    display: flex;
+                    align-items: center;
+                    
+                    span {
+                        font-weight: 400;
+                        font-size: 22px;
+                        letter-spacing: 0.01em;
+                        color: $customBlack;
+
+                        &:first-child {
+                            margin: 0px 5px 0px 0px;
+                        }
+
+                        &:last-child {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                &__right {
+
+                    span {
+
+                        &:last-child {
+                            color: $customOrange;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+
+                @media (max-width: 780px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

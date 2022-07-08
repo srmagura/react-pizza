@@ -1,0 +1,84 @@
+@use '../../styles/variables' as *;
+
+.header {
+    min-height: 135px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid lighten($customGrey, 30%);
+
+    @media (max-width: 735px) {
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1050px) {
+            margin: 0px 0px 10px 0px;
+        }
+
+        img {
+            width: 38px;
+            height: 38px;
+            margin: 0px 17px 0px 0px;
+        }
+
+        &__sign {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+
+            h3 {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.01em;
+                color: $customBlack;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $customGrey;
+            }
+        }
+    }
+
+    .basket {
+        display: flex;
+        align-items: center;
+        background-color: $customOrange;
+        color: #FFFFFF;
+        border-radius: 30px;
+        padding: 15px 23px;
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+
+        &__line {
+            width: 1px;
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.25);
+            margin-left: 14px;
+            margin-right: 14px;
+        }
+
+        &__count {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin: 0px 9px 0px 0px;
+            }
+        }
+    }
+}

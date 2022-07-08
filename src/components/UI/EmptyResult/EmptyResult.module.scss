@@ -1,0 +1,68 @@
+@use '../../../styles/variables' as *;
+
+
+.empty__container {
+    margin: 95px 0px 0px 0px;
+    padding: 0px 295px 130px;
+
+    @media (max-width: 1050px) {
+        padding: 0px 147px 130px;
+    }
+
+    @media (max-width: 780px) {
+        padding: 0px 40px 130px;
+    }
+
+    .empty__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 10px 0px;
+            
+            h2 {
+                font-weight: 700;
+                font-size: 32px;
+                letter-spacing: 0.01em;
+                color: $customBlack;
+                margin: 0px 10px 0px 0px;
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .subtitle {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0px 0px 65px 0px;
+
+            span {
+                font-weight: 400;
+                font-size: 18px;
+                letter-spacing: 0.01em;
+                color: $customGrey;
+
+                &:not(:last-child) {
+                    margin: 0px 0px 5px 0px;
+                }
+            }
+        }
+
+        .picture {
+            margin: 0px 0px 75px 0px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

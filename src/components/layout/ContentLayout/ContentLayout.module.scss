@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as *;
+
+.container {
+    width: calc(100vw - 100px);
+    max-width: 1370px;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+
+    .content {
+        
+        h2 {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: 0.01em;
+            color: $customBlack;
+            margin: 0px 0px 35px 0px;
+        }
+    }
+}

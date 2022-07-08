@@ -1,0 +1,76 @@
+@use '../../../styles/variables' as *;
+
+.basket__section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 30px 0px;
+    border-bottom: 1px solid lighten($customGrey, 30%);
+    margin: 0px 0px 30px 0px;
+
+    @media (max-width: 780px) {
+        align-items: center;
+        flex-direction: column;
+
+        & > div:not(:last-child) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    .basket__pizza {
+        display: flex;
+        
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0px 15px 0px 0px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-weight: 700;
+                font-size: 22px;
+                letter-spacing: 0.01em;
+                color: $customBlack;
+                margin: 0px 0px 5px 0px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 18px;
+                letter-spacing: 0.01em;
+                color: $customGrey
+            }
+        }
+    }
+
+    .basket__pizza__number {
+        display: flex;
+        align-items: center;
+
+        span {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.01em;
+            margin: 0 12px;
+        }
+    }
+
+    .basket__pizza__price {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.01em;
+        color: $customBlack;
+    }
+
+    .basket__pizza__remove {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,114 @@
+@use '../../../styles/variables' as *;
+
+.sort {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__label {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 10px;
+            height: 5px;
+            margin: 0px 7px 0px 0px;
+            transform: rotate(180deg);
+            transition: transform .2s linear;
+        }
+
+        p {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.015em;
+            color: $customBlack;
+            margin: 0px 7px 0px 0px;
+        }
+
+        span {
+            color: $customOrange;
+            border-bottom: 1px dashed currentColor;
+            cursor: pointer;
+        }
+    }
+
+    &__popup {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        z-index: 2;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 10px 0;
+
+        ul {
+
+            li {
+                padding: 12px 20px;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background-color: lighten($customOrange, 40%);
+                }
+
+                &.active {
+                    font-weight: 700;
+                    color: $customOrange;
+                }
+                
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.015em;
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    margin: 0px 10px 0px 0px;
+
+                    .picture {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid $customOrange;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $customOrange;
+
+                            svg {
+                                fill: #FFFFFF;
+                            }
+                        }
+
+                        &:first-child {
+                            margin: 0px 10px 0px 0px;
+
+                            svg {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                            fill: $customOrange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

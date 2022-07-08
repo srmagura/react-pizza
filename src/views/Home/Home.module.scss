@@ -1,0 +1,26 @@
+.home__container {
+    margin: 40px 0px 0px 0px;
+    padding: 0px 40px 40px 40px;
+}
+
+.content__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px 0px 32px 0px;
+
+    @media (max-width: 1226px) {
+        justify-content: center;
+    }
+}
+
+.content__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px 20px;
+    margin: 0px 0px 40px 0px;
+
+    @media (max-width: 459px) {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+}

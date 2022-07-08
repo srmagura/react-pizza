@@ -1,0 +1,54 @@
+@use '../../../styles/variables' as *;
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 45px;
+
+    @media (max-width: 1050px) {
+        margin: 0px 0px 10px 0px;
+    }
+
+    svg {
+        position: absolute;
+        z-index: 2;
+        fill: $customGrey;
+    }
+
+    .search__img {
+        width: 18px;
+        height: 18px;
+        left: 14px;
+        top: 14px;
+    }
+
+    .clean__img {
+        width: 20px;
+        height: 20px;
+        right: 14px;
+        top: 14px;
+        cursor: pointer;
+        fill: $customGrey;
+
+        &:hover {
+            fill: darken($customGrey, 35%);
+        }
+    }
+
+    input {
+        border: 1px solid $customGrey;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 12px 42px;
+        width: 100%;
+        height: 100%;
+        font-family: 'Proxima Nova';
+        outline: none;
+
+        &:focus {
+            border-color: darken($customGrey, 35%);
+        }
+    }
+}
